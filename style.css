@@ -1,9 +1,32 @@
-.top-section {
-    align-content: center;
-    align-items: center;
+body {
+    background-color: gray;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.p1 {
-    align-content: center;
-    align-items: center;
+header {
+    margin: 0;
+    padding: 10px;
+    height: 50vh;
+    text-align: center;
+    box-sizing: border-box;
+
+    border: 1px solid red;
+}
+
+p {
+    color: white;
+    font-size: 12px;
+    float: center;
+}
+
+button {
+    outline: none;
+    background: beige;
+    border: none;
+    float: left;
+    font-size: 12px;
+}
+
+.hide {
+    display: none;
 }
