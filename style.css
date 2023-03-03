@@ -30,3 +30,13 @@ button {
 .hide {
     display: none;
 }
+
+.option {
+    padding: 5px;
+    margin: 5px;
+}
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+}
