@@ -4,30 +4,30 @@ let questions = [
 	{
 		question: "Commonly used data types DO NOT include:",
 		choices: ["1. strings", "2. boolean", "3. alerts", "4. numbers"],
-		correctAnswer: "3. alerts",
+		correctAnswer: "3. alerts"
 	},
 	{
 		question: "The condition in an if / else statement is enclosed with _________",
 		choices: ["1. quotes", "2. curly brackets", "3. parenthesis", "4. square brackets"],
-		correctAnswer: "2. curly brackets",
+		correctAnswer: "2. curly brackets"
 	},
 	{
 		question: "Arrays in Javascript can be used to store _________",
 		choices: ["1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"],
-		correctAnswer: "4. all of the above",
+		correctAnswer: "4. all of the above"
 	},
 	{
 		question: "String values must be enclosed within _________ when being assigned to variables",
 		choices: ["1. commas", "2. curley brackets", "3. quotes", "4. parenthesis"],
-		correctAnswer: "3. quotes",
+		correctAnswer: "3. quotes"
 
 	},
 	{
 		question: "A very useful tool used during development and debugging for printing content to the debugger is:",
 		choices: ["1. Javascript", "2. terminal/bash", "3. for loops", "4. console.log"],
-		correctAnswer: "4. console.log",
+		correctAnswer: "4. console.log"
 	}
-]
+];
 
 start.addEventListener('click', function() {
 	let i = 0; 
@@ -54,3 +54,33 @@ console.log('testing')
 	// 	console.log('!')
 	// }, 1000);
 });
+
+function correctAnswer(){
+    //display answer is correct, move on to next question 
+    console.log("CORRECT")
+
+}
+function wrongAnswer(){
+    //display answer is incorrect
+    console.log("INCORRECT")
+}
+
+function correctAnswer(){
+    //display answer is correct, move on to next question 
+    console.log("CORRECT")
+    if(questionsCount==0){
+        //
+        let questionsPage1 = document.querySelector('.questionsPage1')
+        //hide questionPag1
+        let questionsPage2 = document.querySelector('.questionsPage2')
+        //display questionpage2
+    }
+    if(questionsCount==1){
+        let questionsPage2 = document.querySelector('.questionsPage2')
+        //hide questionPag1
+        let questionsPage3 = document.querySelector('.questionsPage3')
+        //display questionpage2
+    }
+    //repeat 
+
+}

@@ -9,6 +9,11 @@
 </head>
 <body>
 
+    <section class="top-section">
+        <button>View Highscores</button>
+        <p class="timer">Timer: 00:00</p>
+    </section>
+
     <section class="startPage">
         <h1>Coding Quiz Challenge
         </h1>
@@ -24,11 +29,12 @@
     <section class="questionsPage1 hide">
         <h1>Commonly used data types DO NOT include:</h1>
         <div class="option-container">
-        <button id="question1" class="option">1. strings</button>
-        <button id="question2" class="option">2. boolean</button>
-        <button id="question3" class="option">3. alerts</button>
-        <button id="question4" class="option">4. numbers</button>
+            <button id="question1" onclick= "wrongAnswer()" class="option">1. strings</button>
+            <button id="question2" onclick= "wrongAnswer()" class="option">2. boolean</button>
+            <button id="question3" onclick= "correctAnswer()" class="option">3. alerts</button>
+            <button id="question4" onclick= "wrongAnswer()" class="option">4. numbers</button>
         </div>
+        <h2>Correct</h2>
     </section>
 
     <!-- second question -->
