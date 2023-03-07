@@ -19,13 +19,13 @@ p {
     float: center;
 }
 
-button {
+/* button {
     outline: none;
     background: beige;
     border: none;
     float: left;
     font-size: 12px;
-}
+} */
 
 .hide {
     display: none;

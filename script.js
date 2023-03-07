@@ -37,11 +37,12 @@ startPage.classList.add('hide')
 
 let questionsPage1 = document.querySelector('.questionsPage1')
 console.log(questionsPage1.children)
-for (let i = 0; i <4; i++) {
-	let button = document.querySelector(`#question${i+1}`)
-button.value = questions[questionsCount].choices[i]
-button.textContent = questions[questionsCount].choices[i]
-}
+
+// for (let i = 0; i <4; i++) {
+// 	let button = document.querySelector(`#question${i+1}`)
+// button.value = questions[questionsCount].choices[i]
+// button.textContent = questions[questionsCount].choices[i]
+// }
 
 
 	// element.value = questions[questionsCount].choices[i]
@@ -55,32 +56,32 @@ console.log('testing')
 	// }, 1000);
 });
 
-function correctAnswer(){
-    //display answer is correct, move on to next question 
+function correctAnswer1(){
+	document.getElementById("answerOne").innerHTML = "correct";
     console.log("CORRECT")
 
 }
-function wrongAnswer(){
-    //display answer is incorrect
+function wrongAnswer1(){
+    document.getElementById("answerOne").innerHTML = "incorrect";
     console.log("INCORRECT")
 }
 
-function correctAnswer(){
-    //display answer is correct, move on to next question 
-    console.log("CORRECT")
-    if(questionsCount==0){
-        //
-        let questionsPage1 = document.querySelector('.questionsPage1')
-        //hide questionPag1
-        let questionsPage2 = document.querySelector('.questionsPage2')
-        //display questionpage2
-    }
-    if(questionsCount==1){
-        let questionsPage2 = document.querySelector('.questionsPage2')
-        //hide questionPag1
-        let questionsPage3 = document.querySelector('.questionsPage3')
-        //display questionpage2
-    }
-    //repeat 
+// // function correctAnswer(){
+//     //display answer is correct, move on to next question 
+//     console.log("CORRECT")
+//     if(questionsCount==0){
+//         //
+//         let questionsPage1 = document.querySelector('.questionsPage1')
+//         //hide questionPag1
+//         let questionsPage2 = document.querySelector('.questionsPage2')
+//         //display questionpage2
+//     }
+//     if(questionsCount==1){
+//         let questionsPage2 = document.querySelector('.questionsPage2')
+//         //hide questionPag1
+//         let questionsPage3 = document.querySelector('.questionsPage3')
+//         //display questionpage2
+//     }
+//     //repeat 
 
-}
+// }
