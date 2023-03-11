@@ -80,27 +80,3 @@ function wrongAnswer(){
     document.getElementById("answerOne").innerHTML = "incorrect";
     console.log("INCORRECT")
 }
-
-
-
-
-
-// // function correctAnswer(){
-//     //display answer is correct, move on to next question 
-//     console.log("CORRECT")
-//     if(questionsCount==0){
-//         //
-//         let questionsPage1 = document.querySelector('.questionsPage1')
-//         //hide questionPag1
-//         let questionsPage2 = document.querySelector('.questionsPage2')
-//         //display questionpage2
-//     }
-//     if(questionsCount==1){
-//         let questionsPage2 = document.querySelector('.questionsPage2')
-//         //hide questionPag1
-//         let questionsPage3 = document.querySelector('.questionsPage3')
-//         //display questionpage2
-//     }
-//     //repeat 
-
-// }
