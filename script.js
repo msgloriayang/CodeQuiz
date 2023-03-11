@@ -71,6 +71,13 @@ questionsPage4.addEventListener('click', function(event) {
 	questionsPage5.classList.remove('hide')
 })
 
+let finalScore = document.querySelector('.finalScore')
+questionsPage5.addEventListener('click', function(event) {
+	console.log(event.target.textContent)
+	questionsPage5.classList.add('hide')
+	finalScore.classList.remove('hide')
+})
+
 function correctAnswer(){
 	document.getElementById("answerOne").innerHTML = "correct";
     console.log("CORRECT")
