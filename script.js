@@ -1,4 +1,6 @@
 let start = document.querySelector('.start')
+let questionsPage1 = document.querySelector('.questionsPage1')
+console.log(questionsPage1.children)
 let questionsCount = 0
 let questions = [
 	{
@@ -29,42 +31,59 @@ let questions = [
 	}
 ];
 
-start.addEventListener('click', function() {
+start.addEventListener('click', function(event) {
 	let i = 0; 
+
+console.log(event)
 
 let startPage = document.querySelector('.startPage')
 startPage.classList.add('hide')
 
-let questionsPage1 = document.querySelector('.questionsPage1')
-console.log(questionsPage1.children)
-
-// for (let i = 0; i <4; i++) {
-// 	let button = document.querySelector(`#question${i+1}`)
-// button.value = questions[questionsCount].choices[i]
-// button.textContent = questions[questionsCount].choices[i]
-// }
-
-
-	// element.value = questions[questionsCount].choices[i]
-	// element.textContent = questions[questionsCount].choices[i]
 questionsPage1.classList.remove('hide')
-
-console.log('testing')
-
-	// let timerId = setInterval(function() {
-	// 	console.log('!')
-	// }, 1000);
 });
 
-function correctAnswer1(){
+let questionsPage2 = document.querySelector('.questionsPage2')
+let optionContainer = document.querySelector('.optionContainer')
+optionContainer.addEventListener('click', function(event) {
+	console.log(event.target.textContent)
+	questionsPage1.classList.add('hide')
+	questionsPage2.classList.remove('hide')
+})
+
+let questionsPage3 = document.querySelector('.questionsPage3')
+questionsPage2.addEventListener('click', function(event) {
+	console.log(event.target.textContent)
+questionsPage2.classList.add('hide')
+questionsPage3.classList.remove('hide')
+})
+
+let questionsPage4 = document.querySelector('.questionsPage4')
+questionsPage3.addEventListener('click', function(event) {
+	console.log(event.target.textContent)
+	questionsPage3.classList.add('hide')
+	questionsPage4.classList.remove('hide')
+})
+
+let questionsPage5 = document.querySelector('.questionsPage5')
+questionsPage4.addEventListener('click', function(event) {
+	console.log(event.target.textContent)
+	questionsPage4.classList.add('hide')
+	questionsPage5.classList.remove('hide')
+})
+
+function correctAnswer(){
 	document.getElementById("answerOne").innerHTML = "correct";
     console.log("CORRECT")
 
 }
-function wrongAnswer1(){
+function wrongAnswer(){
     document.getElementById("answerOne").innerHTML = "incorrect";
     console.log("INCORRECT")
 }
+
+
+
+
 
 // // function correctAnswer(){
 //     //display answer is correct, move on to next question 

@@ -11,7 +11,7 @@
 
     <section class="top-section">
         <button>View Highscores</button>
-        <p class="timer">Timer: 00:00</p>
+        <div id="currentTime"></div>
     </section>
 
     <section class="startPage">
@@ -28,11 +28,11 @@
     <!-- first question -->
     <section class="questionsPage1 hide">
         <h1>Commonly used data types DO NOT include:</h1>
-        <div class="option-container">
-            <button id="question1" onclick= "wrongAnswer1()" class="option">1. strings</button>
-            <button id="question2" onclick= "wrongAnswer1()" class="option">2. boolean</button>
-            <button id="question3" onclick= "correctAnswer1()" class="option">3. alerts</button>
-            <button id="question4" onclick= "wrongAnswer1()" class="option">4. numbers</button>
+        <div class="optionContainer">
+            <button id="question1" onclick= "wrongAnswer()" class="option">1. strings</button>
+            <button id="question2" onclick= "wrongAnswer()" class="option">2. boolean</button>
+            <button id="question3" onclick= "correctAnswer()" class="option">3. alerts</button>
+            <button id="question4" onclick= "wrongAnswer()" class="option">4. numbers</button>
         </div>
         <h1 id="answerOne"></h1>
     </section>
@@ -40,28 +40,28 @@
     <!-- second question -->
     <section class="questionsPage2 hide">
         <h1>The condition in an if / else statement is enclosed with _________</h1>
-        <button id="question1">1. quotes</button>
-        <button id="question2">2. curly brackets</button>
-        <button id="question3">3. parenthesis</button>
-        <button id="question4">4. square brackets</button>
+        <button id="question5" onclick= "wrongAnswer()">1. quotes</button>
+        <button id="question6" onclick= "wrongAnswer()">2. curly brackets</button>
+        <button id="question7" onclick = "correctAnswer()">3. parenthesis</button>
+        <button id="question8" onclick= "wrongAnswer()">4. square brackets</button>
     </section>
 
     <!-- third question -->
     <section class="questionsPage3 hide">
         <h1>Arrays in Javascript can be used to store _________</h1>
-        <button id ="question1">1. numbers and strings</button>
-        <button id ="question2">2. other arrays</button>
-        <button id ="question3">3. booleans</button>
-        <button id ="question4">4. all of the above</button>
+        <button id ="question9" onclick= "wrongAnswer()">1. numbers and strings</button>
+        <button id ="question10" onclick= "wrongAnswer()">2. other arrays</button>
+        <button id ="question11" onclick= "wrongAnswer()">3. booleans</button>
+        <button id ="question12" onclick= "correctAnswer()">4. all of the above</button>
     </section>
 
     <!-- fourth question -->
     <section class="questionsPage4 hide">
         <h1>String values must be enclosed within _________ when being assigned to variables</h1>
-        <button id ="question1">1. commas</button>
-        <button id ="question2">2. curley brackets</button>
-        <button id ="question3">3. quotes</button>
-        <button id ="question4">4. parenthesis</button>
+        <button id ="question1" onclick= "wrongAnswer()">1. commas</button>
+        <button id ="question2" onclick= "wrongAnswer()">2. curley brackets</button>
+        <button id ="question3" onclick= "correctAnswer()">3. quotes</button>
+        <button id ="question4" onclick= "wrongAnswer()">4. parenthesis</button>
     </section>
 
     <!-- fifth question -->
@@ -69,10 +69,10 @@
         <h1>A very useful tool used during development and debugging for printing
             content to the debugger is:
         </h1>
-        <button id ="question1">1. Javascript</button>
-        <button id ="question2">2. terminal/bash</button>
-        <button id ="question3">3. for loops</button>
-        <button id ="question4">4. console.log</button>
+        <button id ="question1" onclick= "wrongAnswer()">1. Javascript</button>
+        <button id ="question2" onclick= "wrongAnswer()">2. terminal/bash</button>
+        <button id ="question3" onclick= "wrongAnswer()">3. for loops</button>
+        <button id ="question4" onclick= "correctAnswer()">4. console.log</button>
     </section>
 
 <!-- 
