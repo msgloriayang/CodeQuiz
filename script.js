@@ -78,12 +78,27 @@ questionsPage5.addEventListener('click', function(event) {
 	finalScore.classList.remove('hide')
 })
 
+// let endPage = document.querySelector('.endPage')
+// finalScore.addEventListener('click', function(event) {
+// 	console.log(event.target.textContent)
+// 	finalScore.classList.add('hide')
+// 	endPage.classList.remove('hide')
+// })
+
 function correctAnswer(){
-	document.getElementById("answerOne").innerHTML = "correct";
-    console.log("CORRECT")
+	document.getElementById("answerOne").innerHTML = "Correct!";
+    console.log("Correct!")
 
 }
 function wrongAnswer(){
-    document.getElementById("answerOne").innerHTML = "incorrect";
-    console.log("INCORRECT")
+    document.getElementById("answerOne").innerHTML = "Wrong!";
+    console.log("Wrong!")
 }
+
+// timer
+var myfunc = setInterval(function() {
+if (timeleft < 0) {
+    clearInterval(myfunc);
+   	document.getElementById("secs").innerHTML = "";
+    document.getElementById("end").innerHTML = "TIME UP!!";
+}}
