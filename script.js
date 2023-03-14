@@ -96,9 +96,17 @@ function wrongAnswer(){
 }
 
 // timer
-var myfunc = setInterval(function() {
-if (timeleft < 0) {
-    clearInterval(myfunc);
-   	document.getElementById("secs").innerHTML = "";
-    document.getElementById("end").innerHTML = "TIME UP!!";
-}}
+var counter = 20;
+
+window.setInterval(function () {
+	counter--;
+	if (counter >= 0) {
+		var span;
+		span = document.getElementById("timer");
+		span.innerHTML = counter;
+	}
+	if (counter === 0) {
+		clearInterval(counter);
+	}
+
+}, 1000);
