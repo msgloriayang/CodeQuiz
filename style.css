@@ -19,6 +19,11 @@ p {
     float: center;
 }
 
+
+h2 {
+    float: right;
+}
+
 /* button {
     outline: none;
     background: beige;

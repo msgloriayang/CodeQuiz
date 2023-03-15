@@ -31,48 +31,50 @@ let questions = [
 	}
 ];
 
-start.addEventListener('click', function(event) {
-	let i = 0; 
+start.addEventListener('click', function (event) {
+	let i = 0;
 
-console.log(event)
+	startTimer()
 
-let startPage = document.querySelector('.startPage')
-startPage.classList.add('hide')
+	console.log(event)
 
-questionsPage1.classList.remove('hide')
+	let startPage = document.querySelector('.startPage')
+	startPage.classList.add('hide')
+
+	questionsPage1.classList.remove('hide')
 });
 
 let questionsPage2 = document.querySelector('.questionsPage2')
 let optionContainer = document.querySelector('.optionContainer')
-optionContainer.addEventListener('click', function(event) {
+optionContainer.addEventListener('click', function (event) {
 	console.log(event.target.textContent)
 	questionsPage1.classList.add('hide')
 	questionsPage2.classList.remove('hide')
 })
 
 let questionsPage3 = document.querySelector('.questionsPage3')
-questionsPage2.addEventListener('click', function(event) {
+questionsPage2.addEventListener('click', function (event) {
 	console.log(event.target.textContent)
-questionsPage2.classList.add('hide')
-questionsPage3.classList.remove('hide')
+	questionsPage2.classList.add('hide')
+	questionsPage3.classList.remove('hide')
 })
 
 let questionsPage4 = document.querySelector('.questionsPage4')
-questionsPage3.addEventListener('click', function(event) {
+questionsPage3.addEventListener('click', function (event) {
 	console.log(event.target.textContent)
 	questionsPage3.classList.add('hide')
 	questionsPage4.classList.remove('hide')
 })
 
 let questionsPage5 = document.querySelector('.questionsPage5')
-questionsPage4.addEventListener('click', function(event) {
+questionsPage4.addEventListener('click', function (event) {
 	console.log(event.target.textContent)
 	questionsPage4.classList.add('hide')
 	questionsPage5.classList.remove('hide')
 })
 
 let finalScore = document.querySelector('.finalScore')
-questionsPage5.addEventListener('click', function(event) {
+questionsPage5.addEventListener('click', function (event) {
 	console.log(event.target.textContent)
 	questionsPage5.classList.add('hide')
 	finalScore.classList.remove('hide')
@@ -85,28 +87,31 @@ questionsPage5.addEventListener('click', function(event) {
 // 	endPage.classList.remove('hide')
 // })
 
-function correctAnswer(){
+function correctAnswer() {
 	document.getElementById("answerOne").innerHTML = "Correct!";
-    console.log("Correct!")
+	console.log("Correct!")
 
 }
-function wrongAnswer(){
-    document.getElementById("answerOne").innerHTML = "Wrong!";
-    console.log("Wrong!")
+function wrongAnswer() {
+	document.getElementById("answerOne").innerHTML = "Wrong!";
+	console.log("Wrong!")
 }
 
 // timer
-var counter = 20;
+var counter= 20;
 
-window.setInterval(function () {
-	counter--;
-	if (counter >= 0) {
-		var span;
-		span = document.getElementById("timer");
-		span.innerHTML = counter;
-	}
-	if (counter === 0) {
-		clearInterval(counter);
-	}
+function startTimer() {
+	window.setInterval(function () {
+		counter--;
+		if (counter >= 0) {
+			var span;
+			span = document.getElementById("timer");
+			span.innerHTML = counter;
+		}
+		if (counter === 0) {
+			clearInterval(counter);
+		}
 
-}, 1000);
+	}, 1000);
+}
+
