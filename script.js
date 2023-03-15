@@ -98,7 +98,7 @@ function wrongAnswer() {
 }
 
 // timer
-var counter= 20;
+var counter= 30;
 
 function startTimer() {
 	window.setInterval(function () {
@@ -111,8 +111,9 @@ function startTimer() {
 		if (counter === 0) {
 			clearInterval(counter);
 		}
+		startTimer();
 	}, 1000);
 	setTimeout(() => {
 		alert('Time is up!');
-	  }, 20000);
+	  }, 30000);
 }
