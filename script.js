@@ -112,9 +112,7 @@ function startTimer() {
 			clearInterval(counter);
 		}
 	}, 1000);
-}
-
-function timesUp() {
-	document.querySelector('.start');
-	alert('Times Up');
+	setTimeout(() => {
+		alert('Times up!');
+	  }, 30000);
 }
