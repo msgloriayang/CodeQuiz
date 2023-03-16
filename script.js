@@ -111,7 +111,6 @@ function startTimer() {
 		if (counter === 0) {
 			clearInterval(counter);
 		}
-		startTimer();
 	}, 1000);
 	setTimeout(() => {
 		alert('Time is up!');
