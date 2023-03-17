@@ -73,11 +73,11 @@ questionsPage4.addEventListener('click', function (event) {
 	questionsPage5.classList.remove('hide')
 })
 
-let finalScore = document.querySelector('.finalScore')
+let scoresPage = document.querySelector('.scoresPage')
 questionsPage5.addEventListener('click', function (event) {
 	console.log(event.target.textContent)
 	questionsPage5.classList.add('hide')
-	finalScore.classList.remove('hide')
+	scoresPage.classList.remove('hide')
 })
 
 // let endPage = document.querySelector('.endPage')
@@ -95,6 +95,7 @@ function correctAnswer() {
 function wrongAnswer() {
 	document.getElementById("answerOne").innerHTML = "Wrong!";
 	console.log("Wrong!")
+	counter-=5;
 }
 
 // timer
@@ -108,11 +109,18 @@ function startTimer() {
 			span = document.getElementById("timer");
 			span.innerHTML = counter;
 		}
-		if (counter === 0) {
+		if (counter <= 0) {
 			clearInterval(counter);
+			// displayFinalScore()
 		}
 	}, 1000);
 	setTimeout(() => {
 		alert('Time is up!');
 	  }, 30000);
+}
+
+function displayFinalScore(){
+const score = calculateScore();
+document.getElementById("finalScore").innerHTML = score;
+document.getElementById("scoresPage").style.display = "block";
 }
