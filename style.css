@@ -1,6 +1,11 @@
 body {
-    background-color: gray;
+    background-color: white;
+    text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.topSection {
+text-align: left;
 }
 
 header {
@@ -9,28 +14,18 @@ header {
     height: 50vh;
     text-align: center;
     box-sizing: border-box;
-
-    border: 1px solid red;
 }
 
 p {
-    color: white;
+    color: black;
     font-size: 12px;
     float: center;
 }
 
 
 h2 {
-    float: right;
+    text-align: right;
 }
-
-/* button {
-    outline: none;
-    background: beige;
-    border: none;
-    float: left;
-    font-size: 12px;
-} */
 
 .hide {
     display: none;
@@ -50,6 +45,14 @@ h2 {
     text-align: right;
 }
 
-/* .scoresPage {
-    display: none;
-} */
+button {
+    border-radius: 25px;
+    background-color:indigo;
+    padding: 10px;
+    height: 30px;
+    color: white;
+}
+
+button:hover {
+    background-color: purple;
+}
