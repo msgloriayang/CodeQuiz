@@ -111,7 +111,7 @@ function startTimer() {
 		}
 		if (counter <= 0) {
 			clearInterval(counter);
-			// displayFinalScore()
+			displayFinalScore()
 		}
 	}, 1000);
 	setTimeout(() => {
@@ -121,6 +121,10 @@ function startTimer() {
 
 function displayFinalScore(){
 const score = calculateScore();
-document.getElementById("finalScore").innerHTML = score;
+document.getElementById("FinalScore").innerHTML = score;
 document.getElementById("scoresPage").style.display = "block";
+}
+
+function calculateScore() {
+
 }
