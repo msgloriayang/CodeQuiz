@@ -76,7 +76,8 @@ questionsPage4.addEventListener('click', function (event) {
 let scoresPage = document.querySelector('.scoresPage')
 questionsPage5.addEventListener('click', function (event) {
 	console.log(event.target.textContent)
-	questionsPage5.classList.add('hide')
+	scoresPage.classList.add('hide')
+	questionsPage5.classList.remove('hide')
 })
 
 function correctAnswer() {
@@ -88,6 +89,9 @@ function wrongAnswer() {
 	document.getElementById("answerOne").innerHTML = "Wrong!";
 	console.log("Wrong!")
 	counter-=5;
+}
+
+function displayFinalScore() {
 }
 
 // timer
@@ -120,3 +124,4 @@ localStorage.setItem('quizScore', score);
 let quizScore = localStorage.getItem('scoresPage');
 // display score on final scores page
 document.getElementById('FinalScore').innerHTML = quizScore;
+
