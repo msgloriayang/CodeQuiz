@@ -80,7 +80,7 @@ questionsPage5.addEventListener('click', function (event) {
 	questionsPage5.classList.add('hide')
 })
 
-function correctAnswer() {
+function displayCorrectAnswer() {
 	document.getElementById("answerOne").innerHTML = "Correct!";
 	console.log("Correct!")
 
@@ -104,7 +104,7 @@ function updateScore(selectedAnswer, correctAnswer) {
 
 // // Assuming the user selects an answer with a class of "answer"
 // let selectedAnswer = document.querySelector('.correctAnswer').value;
-// // let correctAnswer = ["question3, question7, question12, question3, question4"];
+// let correctAnswer = ["question3, question7, question12, question3, question4"];
 
 
 function updateScore(selectedAnswer, correctAnswer) {
