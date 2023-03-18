@@ -77,7 +77,6 @@ let scoresPage = document.querySelector('.scoresPage')
 questionsPage5.addEventListener('click', function (event) {
 	console.log(event.target.textContent)
 	questionsPage5.classList.add('hide')
-	scoresPage.classList.remove('hide')
 })
 
 function correctAnswer() {
@@ -106,9 +105,6 @@ function startTimer() {
 			displayFinalScore()
 		}
 	}, 1000);
-	setTimeout(() => {
-		alert('Time is up!');
-	  }, 30000);
 }
 
 function displayFinalScore(){
@@ -121,8 +117,8 @@ function calculateScore() {
 }
 
 // variable to keep track of score
-let FinalScore = 0;
-document.getElementById("score").textContent = score;
-id (userAnswer === correctAnswer); {
-	score += 1;
-}
+// let FinalScore = 0;
+// document.getElementById("score").textContent = score;
+// id (userAnswer === correctAnswer); {
+// 	score += 1;
+// }
