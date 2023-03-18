@@ -110,7 +110,6 @@ function startTimer() {
 function displayFinalScore(){
 const score = calculateScore();
 document.getElementById("FinalScore").innerHTML = score;
-document.getElementById("scoresPage").style.display = "block";
 }
 
 function calculateScore() {
@@ -118,8 +117,8 @@ function calculateScore() {
 }
 
 // // variable to keep track of score
-// let FinalScore = 0;
-// document.getElementById("score").textContent = score;
-// id (userAnswer === correctAnswer); {
-// 	score += 1;
-// }
+let FinalScore = 0;
+document.getElementById("score").textContent = score;
+id (userAnswer === correctAnswer); {
+	score += 1;
+}
