@@ -31,6 +31,7 @@ let questions = [
 	}
 ];
 
+// start quiz button
 start.addEventListener('click', function (event) {
 	let i = 0;
 
@@ -80,10 +81,11 @@ questionsPage5.addEventListener('click', function (event) {
 	questionsPage5.classList.add('hide')
 })
 
+
+// this part displays correct/wrong answers
 function displayCorrectAnswer() {
 	document.getElementById("answerOne").innerHTML = "Correct!";
 	console.log("Correct!")
-
 }
 function wrongAnswer() {
 	document.getElementById("answerOne").innerHTML = "Wrong!";
@@ -94,33 +96,31 @@ function wrongAnswer() {
 // // populating score with correct answers
 let score = 0;
 
-
-function updateScore(selectedAnswer, correctAnswer) {
-  if (selectedAnswer === correctAnswer) {
-    score += 1;
+function saveScore() {
+	let score = localStorage.getItem('quizScore');
+	localStorage.setItem('highScore', score);
+	alert('Your score has been saved!');
   }
-}
-
-
-// // Assuming the user selects an answer with a class of "answer"
-// let selectedAnswer = document.querySelector('.correctAnswer').value;
-// let correctAnswer = ["question3, question7, question12, question3, question4"];
-
-
+  
+//   submit score button
 function updateScore(selectedAnswer, correctAnswer) {
  if (correctAnswers.includes(selectedAnswer)) {
      score += 1;
  }
+ let submitButton = document.getElementById('.submitButton');
+ submitButton.addEventListener('click', saveScore); 
 }
 
+// displays score on final score page
 function displayFinalScore() {
      document.getElementById("FinalScore").innerHTML = score;
-     }
-
+localStorage.setItem('quizScore', score);
+let quizScore = localStorage.getItem('scoresPage');
+document.getElementById('FinalScore').innerHTML = quizScore;
+}
 
 // timer
 var counter= 30;
-
 
 function startTimer() {
  window.setInterval(function () {
@@ -135,12 +135,3 @@ function startTimer() {
      }
  }, 1000);
 }
-
-
-// // saves score to local storage
-localStorage.setItem('quizScore', score);
-// // retrieves score from local storage on final scores page
-let quizScore = localStorage.getItem('scoresPage');
-// // display score on final scores page
-document.getElementById('FinalScore').innerHTML = quizScore;
-
