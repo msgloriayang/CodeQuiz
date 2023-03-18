@@ -93,45 +93,54 @@ function wrongAnswer() {
 	counter-=5;
 }
 
-// // populating score with correct answers
-let score = 0;
+// populating score with correct answers
+let score = localStorage.getItem('quizScore') ||0;
 
 function saveScore() {
-	let score = localStorage.getItem('quizScore');
-	localStorage.setItem('highScore', score);
-	alert('Your score has been saved!');
-  }
+  localStorage.setItem('quizScore', score);
+  console.log(score);
+  alert('Your score has been saved!');
+}
   
-//   submit score button
 function updateScore(selectedAnswer, correctAnswer) {
- if (correctAnswers.includes(selectedAnswer)) {
-     score += 1;
- }
- let submitButton = document.getElementById('.submitButton');
- submitButton.addEventListener('click', saveScore); 
+	console.log("updateScore called with", selectedAnswer, correctAnswer);
+  if (selectedAnswer === correctAnswer) {
+    score += 1;
+	document.getElementById('score').innerText = score;
+    saveScore();
+  }
 }
 
 // displays score on final score page
 function displayFinalScore() {
-     document.getElementById("FinalScore").innerHTML = score;
-localStorage.setItem('quizScore', score);
-let quizScore = localStorage.getItem('scoresPage');
-document.getElementById('FinalScore').innerHTML = quizScore;
+	console.log("displayFinalScore called with score", score);
+	document.getElementById("FinalScore").innerHTML = score;
+  let quizScore = localStorage.getItem('quizScore');
+  document.getElementById('FinalScore').innerHTML = quizScore;
 }
 
+// submit button event listener
+let submitButton = document.getElementById('submitButton');
+let initials = document.getElementById('initials').value;
+localStorage.setItem('initials', initials);
+submitButton.addEventListener('click', function() {
+	console.log('initials');
+	// window.location.href = 'endpage.html';
+});
+
 // timer
-var counter= 30;
+let counter= 30;
 
 function startTimer() {
- window.setInterval(function () {
+ timer = setInterval(function () {
      counter--;
      if (counter >= 0) {
-         var span;
-         span = document.getElementById("timer");
+         let span = document.getElementById("timer");
          span.innerHTML = counter;
      }
-     if (counter <= 0) {
-         displayFinalScore()
+     if (counter === 0) {
+		clearInterval(timer);
+         displayFinalScore();
      }
  }, 1000);
 }
