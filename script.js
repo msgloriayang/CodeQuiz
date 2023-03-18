@@ -117,9 +117,9 @@ function calculateScore() {
 	scoresPage.classList.remove('hide')
 }
 
-// variable to keep track of score
-let FinalScore = 0;
-document.getElementById("score").textContent = score;
-id (userAnswer === correctAnswer); {
-	score += 1;
-}
+// // variable to keep track of score
+// let FinalScore = 0;
+// document.getElementById("score").textContent = score;
+// id (userAnswer === correctAnswer); {
+// 	score += 1;
+// }
