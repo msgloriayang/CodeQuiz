@@ -91,8 +91,17 @@ function wrongAnswer() {
 	counter-=5;
 }
 
-function displayFinalScore() {
+let score = 0;
+
+function updateScore(correctAnswer) {
+  if (correctAnswer) {
+    score += 1;
+  }
 }
+
+function displayFinalScore() {
+		document.getElementById("FinalScore").innerHTML = score;
+		}
 
 // timer
 var counter= 30;
@@ -109,13 +118,6 @@ function startTimer() {
 			displayFinalScore()
 		}
 	}, 1000);
-}
-
-let score = 0;
-function updateScore(answer) {
-	if (answer === correctAnswer) {
-		score ++;
-	}
 }
 
 // saves score to local storage
