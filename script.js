@@ -91,39 +91,56 @@ function wrongAnswer() {
 	counter-=5;
 }
 
+// // populating score with correct answers
 let score = 0;
 
-function updateScore(correctAnswer) {
-  if (correctAnswer) {
+
+function updateScore(selectedAnswer, correctAnswer) {
+  if (selectedAnswer === correctAnswer) {
     score += 1;
   }
 }
 
+
+// // Assuming the user selects an answer with a class of "answer"
+// let selectedAnswer = document.querySelector('.correctAnswer').value;
+// // let correctAnswer = ["question3, question7, question12, question3, question4"];
+
+
+function updateScore(selectedAnswer, correctAnswer) {
+ if (correctAnswers.includes(selectedAnswer)) {
+     score += 1;
+ }
+}
+
 function displayFinalScore() {
-		document.getElementById("FinalScore").innerHTML = score;
-		}
+     document.getElementById("FinalScore").innerHTML = score;
+     }
+
 
 // timer
 var counter= 30;
 
+
 function startTimer() {
-	window.setInterval(function () {
-		counter--;
-		if (counter >= 0) {
-			var span;
-			span = document.getElementById("timer");
-			span.innerHTML = counter;
-		}
-		if (counter <= 0) {
-			displayFinalScore()
-		}
-	}, 1000);
+ window.setInterval(function () {
+     counter--;
+     if (counter >= 0) {
+         var span;
+         span = document.getElementById("timer");
+         span.innerHTML = counter;
+     }
+     if (counter <= 0) {
+         displayFinalScore()
+     }
+ }, 1000);
 }
 
-// saves score to local storage
+
+// // saves score to local storage
 localStorage.setItem('quizScore', score);
-// retrieves score from local storage on final scores page
+// // retrieves score from local storage on final scores page
 let quizScore = localStorage.getItem('scoresPage');
-// display score on final scores page
+// // display score on final scores page
 document.getElementById('FinalScore').innerHTML = quizScore;
 
