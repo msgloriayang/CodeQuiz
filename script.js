@@ -107,18 +107,16 @@ function startTimer() {
 	}, 1000);
 }
 
-function displayFinalScore(){
-const score = calculateScore();
-document.getElementById("FinalScore").innerHTML = score;
+let score = 0;
+function updateScore(answer) {
+	if (answer === correctAnswer) {
+		score ++;
+	}
 }
 
-function calculateScore() {
-	scoresPage.classList.remove('hide')
-}
-
-// // variable to keep track of score
-let FinalScore = 0;
-document.getElementById("score").textContent = score;
-id (userAnswer === correctAnswer); {
-	score += 1;
-}
+// saves score to local storage
+localStorage.setItem('quizScore', score);
+// retrieves score from local storage on final scores page
+let quizScore = localStorage.getItem('scoresPage');
+// display score on final scores page
+document.getElementById('FinalScore').innerHTML = quizScore;
