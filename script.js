@@ -76,8 +76,8 @@ questionsPage4.addEventListener('click', function (event) {
 let scoresPage = document.querySelector('.scoresPage')
 questionsPage5.addEventListener('click', function (event) {
 	console.log(event.target.textContent)
-	scoresPage.classList.add('hide')
-	questionsPage5.classList.remove('hide')
+	scoresPage.classList.remove('hide')
+	questionsPage5.classList.add('hide')
 })
 
 function correctAnswer() {
