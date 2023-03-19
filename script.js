@@ -130,19 +130,24 @@ submitButton.addEventListener('click', function() {
 
 // timer
 let counter= 30;
+let currentQuestion = 0;
 
 function startTimer() {
-let currentQuestion = 0; 
-
- timer = setInterval(function () {
+ let timer = setInterval(function () {
      counter--;
      if (counter >= 0) {
          let span = document.getElementById("timer");
          span.innerHTML = counter;
-     }
-     if (counter === 0 || currentQuestion === questions.length - 1) {
+     } else {
 		clearInterval(timer);
 	 }
-	 currentQuestion++;
  }, 1000);
+}
+
+function nextQuestion() {
+	currentQuestion++;
+	if (currentQuestion === questions.length) {
+		clearInterval(timer);
+	} else {
+}
 }
