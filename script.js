@@ -132,14 +132,17 @@ submitButton.addEventListener('click', function() {
 let counter= 30;
 
 function startTimer() {
+let currentQuestion = 0; 
+
  timer = setInterval(function () {
      counter--;
      if (counter >= 0) {
          let span = document.getElementById("timer");
          span.innerHTML = counter;
      }
-     if (counter === 0) {
+     if (counter === 0 || currentQuestion === questions.length - 1) {
 		clearInterval(timer);
 	 }
+	 currentQuestion++;
  }, 1000);
 }
