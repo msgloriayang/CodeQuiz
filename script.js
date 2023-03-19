@@ -69,9 +69,9 @@ questionsPage3.addEventListener('click', function (event) {
 
 let questionsPage5 = document.querySelector('.questionsPage5')
 questionsPage4.addEventListener('click', function (event) {
-	console.log(event.target.textContent)
-	questionsPage4.classList.add('hide')
-	questionsPage5.classList.remove('hide')
+	console.log(event.target.textContent);
+	questionsPage4.classList.add('hide');
+	questionsPage5.classList.remove('hide');
 })
 
 let scoresPage = document.querySelector('.scoresPage')
@@ -86,7 +86,9 @@ questionsPage5.addEventListener('click', function (event) {
 function displayCorrectAnswer() {
 	document.getElementById("answerOne").innerHTML = "Correct!";
 	console.log("Correct!")
+	updateScore()
 }
+
 function wrongAnswer() {
 	document.getElementById("answerOne").innerHTML = "Wrong!";
 	console.log("Wrong!")
@@ -94,13 +96,12 @@ function wrongAnswer() {
 }
 
 // populating score with correct answers
-let score = localStorage.getItem('quizScore') ||0;
+let score = parseInt(localStorage.getItem('quizScore')) ||0;
 
 function saveScore() {
-  localStorage.setItem('quizScore', score);
-  console.log(score);
-  alert('Your score has been saved!');
-}
+	localStorage.setItem('quizScore', score.toString());
+	console.log(score);
+  }  
   
 function updateScore(selectedAnswer, correctAnswer) {
 	console.log("updateScore called with", selectedAnswer, correctAnswer);
@@ -114,7 +115,6 @@ function updateScore(selectedAnswer, correctAnswer) {
 // displays score on final score page
 function displayFinalScore() {
 	console.log("displayFinalScore called with score", score);
-	document.getElementById("FinalScore").innerHTML = score;
   let quizScore = localStorage.getItem('quizScore');
   document.getElementById('FinalScore').innerHTML = quizScore;
 }
@@ -123,8 +123,9 @@ function displayFinalScore() {
 let submitButton = document.getElementById('submitButton');
 let initials = document.getElementById('initials').value;
 localStorage.setItem('initials', initials);
+localStorage.setItem('quizScore', score.toString());
 submitButton.addEventListener('click', function() {
-	console.log('initials');
+	console.log(initials);
 	// window.location.href = 'endpage.html';
 });
 
@@ -140,7 +141,6 @@ function startTimer() {
      }
      if (counter === 0) {
 		clearInterval(timer);
-         displayFinalScore();
-     }
+	 }
  }, 1000);
 }
