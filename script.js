@@ -121,12 +121,11 @@ function displayFinalScore() {
 
 // submit button event listener
 let submitButton = document.getElementById('submitButton');
-let initials = document.getElementById('initials').value;
-localStorage.setItem('initials', initials);
-localStorage.setItem('quizScore', score.toString());
 submitButton.addEventListener('click', function() {
-	console.log(initials);
-	// window.location.href = 'endpage.html';
+  let initials = document.getElementById('initials').value;
+  localStorage.setItem('initials', initials);
+  localStorage.setItem('quizScore', score.toString());
+  console.log(initials);
 });
 
 // timer
